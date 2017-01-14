@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机访问网站</title>
+	<style type="text/css">
+		a{
+			/*display: none;*/
+		}
+	</style>
+</head>
+<body>
+	<a href="https://www.baidu.com" id="a1"></a>
+	<a href="http://www.hao123.com" id="a2"></a>
+	<script type="text/javascript">
+		window.onload = function(){
+			setInterval(function(){
+				var num = Math.random();
+				if (num<=0.5) {
+					document.getElementById('a1').click();
+				}
+				if(num>0.5){
+					document.getElementById('a2').click();
+				}
+			},1)
+		
+		}
+	</script>
+</body>
+</html>
